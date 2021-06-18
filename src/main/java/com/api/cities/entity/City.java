@@ -3,6 +3,7 @@ package com.api.cities.entity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.springframework.data.geo.Point;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -29,5 +30,5 @@ public class City {
     private String geolocation;
 
     @Column(name = "lat_lon", updatable = false, insertable = false)
-    private PointType location;
+    private Point location;
 }
